@@ -6,15 +6,24 @@ public class MyCode
 {
 	public static void main(String[] args)
 	{
-			System.out.print("Whats wrong");
+			System.out.print("Enter a string");
+
 			Scanner in = new Scanner(System.in);
-			String q = in.next();
-			String reverse = "";
-			
-			for(int i = q.length(); i > 0; i++)
+
+			String input = "";
+
+			while ( in.hasNext() )
 			{
-				reverse += q.charAt(i);
+				input += in.next();
 			}
+
+			String reverse = "";
+
+			for(int i = input.length()- 1; i >= 0; i--)
+			{
+				reverse += input.charAt(i);
+			}
+
 			System.out.print(reverse);
 	}
 }
